@@ -1,0 +1,40 @@
+body{
+    padding-top: 30%;
+    background-color: black;
+    margin: auto;
+    text-align: center;
+}
+
+th{
+    text-align: center;
+    margin: auto;
+}
+
+h1{
+    text-align: center;
+    color: white;
+}
+
+h2{
+    text-align: center;
+    color: white;
+}
+
+table{
+    width: 50%;
+}
+
+
+table, td{
+    color: white;
+    margin: auto;
+    text-align: center;
+}
+
+thead, tfoot{
+    border: 1px solid grey;
+    text-align: center;
+    color: white;
+    margin: auto;
+    text-align: center;
+}
