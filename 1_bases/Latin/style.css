@@ -1,110 +1,66 @@
-body{
-    background-color: #d3d3d3;
+html, body{
+    height: 100%;
+    width: 100%;    
+    margin: 0px;
+    background-color: rgb(166, 241, 159);
 }
-
-/*navbar*/
-
-
-.navbar{
-    background-color: #646464 !important;
+ 
+.nav{
+    width: 100%;
+    height: 40px;
+    background-color: grey;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    text-align: right;
+    color: white;
 }
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    color: white;
-    margin-left: 60%;
-    background-color: #646464 !important;
-    line-height: 44px;
-    
-  }
-
-a {
-    color: white;
+.title{
+    font-size: 22px;
     text-align: center;
-    padding: 14px 16px;
-    margin-right: 36px;
-    text-decoration: none;
-  }
-  
-
-  /*section*/
-
-  section{
-      background-color: white;
-      margin: -47px 88px 12px 88px;
-  }
-
-  .accueil{
-      margin : 48px 0 0 24px;
-      padding-top: 36px;
-  }
-
-hr{
-    margin: 0 24px 24px 0;
+    font-weight: bold;    
 }
-
-  /*premier paragraphe*/
-
-.troisieme{
-    border: 1px solid grey;
-    margin: 0 24px 24px 0;
+header{
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding: 30px;
+    border-bottom: 1px black solid;
+    text-align: left;
 }
-
-  h3{
-      text-align: center;
-  }
-
-  .texte1{
-      margin: 12px 400px 12px 48px;
-      text-align: justify;
-  }
-
-  .poussin1{
-      float: right;
-      margin-right: -250px;
-      margin-top: -190px
-  }
-
-/*deuxieme paragraphe*/
-
-.quatrieme{
-    border: 1px solid grey;
-    margin: 0 24px 24px 0;
+.grid-container{
+    display: grid;
+    justify-content: center;
+    align-items: stretch;
+    background-color: white;
+    padding: 20px;
+    width: 50%;
+    grid-template-columns: 100%;
+    margin: 0 auto;
 }
-
-.texte2{
+.article{
+    padding: 20px;
+    padding-top: 40px;
+    display: grid;
     text-align: justify;
-    margin-left: 250px;
-    margin-top: -190px;
-    padding-right: 48px;
-
+    border: 1px grey solid;
+    margin: 10px;
 }
-.poussin2{
-    margin-left: 30px;
-    padding-left: 3px;
-}
-
-/*troisieme paragraphe*/
-
-.cinquieme{
-    border: 1px solid grey;
-    margin: 0 24px 24px 0;
+@media print{
+    html, body{
+        border: none;
+        margin: 0px;
+        background-color: white;
+    }
+    .grid-container{
+        width: 100%;
+        padding: 0px;
+    }
+    .grid-container .article img{
+        display: none;
+    }
+    #lol{
+        display: block;
+    }
     
-}
-
-.poussin3{
-    margin-left: 30px;
-    padding-left: 3px;
-}
-
-.texte3{
-    margin-top: -300px;
-    height:auto; 
-    text-align:justify; 
-    padding: 96px 48px 48px 124px;
-    float: left;
-    text-indent: 48px;
-
 }
