@@ -1,0 +1,1 @@
+document.getElementById(div).style.color='#bab9b7';
