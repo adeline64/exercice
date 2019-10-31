@@ -1,0 +1,208 @@
+html, body{
+    padding:0;
+    margin:0;
+    height:100%;
+    width:100%;
+}
+
+
+
+/*feu 3 et 4 syncro*/
+
+
+.bordure3{
+    border: 1px solid #3d3d3d;
+    width: 150px;
+    height: 360px;
+    background-color: #3d3d3d;
+    margin-left: 430px;
+}
+
+.rouge3{
+    border-radius: 50%;
+    border-color: #a72a2a;
+    background-color: #a72a2a;
+    width: 100px !important;
+    height: 100px !important;
+    margin: auto;
+    margin-top: 12px;
+    animation: rougeAnim1 10s ease infinite;
+}
+
+
+.orange3{
+    border-radius: 50%;
+    border-color: #f9ce00;
+    background-color: #f9ce00;
+    width: 100px !important;
+    height: 100px !important;
+    margin: auto;
+    animation: orangeAnim1 10s ease infinite;
+    margin-top: 12px;
+}
+
+.vert3{
+    border-radius: 50%;
+    border-color: #2ee092;
+    background-color: #2ee092;
+    width: 100px !important;
+    height: 100px !important;
+    margin: auto;
+    margin-top: 12px;
+    animation: vertAnim1 10s ease infinite;
+}
+
+
+/* Changements de couleurs */
+@keyframes vertAnim1 {
+    0% {
+        opacity:1;
+    }
+    33%{
+        opacity:1;
+    }
+    34%{
+        opacity:0.5;
+    }
+    100% {
+        opacity:0.5;
+    }
+}
+
+@keyframes orangeAnim1 {
+    0% {
+        opacity:0.5;
+    }
+    33%{
+        opacity:0.5;
+    }
+    34%{
+        opacity:1;
+    }
+    66% {
+        opacity:1;
+    }
+    67% {
+        opacity:0.5;
+    }
+    100% {
+        opacity:0.5;
+    }
+}
+
+@keyframes rougeAnim1 {
+    0% {
+        opacity:0.5;
+    }
+    66%{
+        opacity:0.5;
+    }
+    67%{
+        opacity:1;
+    }
+    99% {
+        opacity:1;
+    }
+    100% {
+        opacity:0.5;
+    }
+}
+
+.bordure4{
+    border: 1px solid #3d3d3d;
+    width: 150px;
+    height: 360px;
+    background-color: #3d3d3d;
+    margin-left: 600px;
+    margin-top: -361px;
+}
+
+
+
+.rouge4{
+    border-radius: 50%;
+    border-color: #a72a2a;
+    background-color: #a72a2a;
+    width: 100px !important;
+    height: 100px !important;
+    margin: auto;
+    margin-top: 12px;
+    animation: rougeAnim2 10s ease infinite;
+}
+
+.orange4{
+    border-radius: 50%;
+    border-color: #f9ce00;
+    background-color: #f9ce00;
+    width: 100px !important;
+    height: 100px !important;
+    margin: auto;
+    margin-top: 12px;
+    animation: orangeAnim2 10s ease infinite;
+}
+
+.vert4{
+    border-radius: 50%;
+    border-color: #2ee092;
+    background-color: #2ee092;
+    width: 100px !important;
+    height: 100px !important;
+    margin: auto;
+    margin-top: 12px;
+    animation: vertAnim2 10s ease infinite;
+}
+
+/* Deuxieme feu */
+@keyframes orangeAnim2 {
+    0% {
+        opacity:1;
+    }
+    33%{
+        opacity:1;
+    }
+    34%{
+        opacity:0.5;
+    }
+    100% {
+        opacity:0.5;
+    }
+}
+
+@keyframes rougeAnim2 {
+    0% {
+        opacity:0.5;
+    }
+    33%{
+        opacity:0.5;
+    }
+    34%{
+        opacity:1;
+    }
+    66% {
+        opacity:1;
+    }
+    67% {
+        opacity:0.5;
+    }
+    100% {
+        opacity:0.5;
+    }
+}
+
+@keyframes vertAnim2 {
+    0% {
+        opacity:0.5;
+    }
+    66%{
+        opacity:0.5;
+    }
+    67%{
+        opacity:1;
+    }
+    99% {
+        opacity:1;
+    }
+    100% {
+        opacity:0.5;
+    }
+}

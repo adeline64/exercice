@@ -1,0 +1,38 @@
+/*feu 1*/
+
+.bordure{
+    border: 1px solid #3d3d3d;
+    width: 150px;
+    height: 360px;
+    background-color: #3d3d3d;
+}
+
+.rouge{
+    border-radius: 50%;
+    border-color: #a72a2a;
+    background-color: #a72a2a;
+    width: 100px !important;
+    height: 100px !important;
+    margin: auto;
+    margin-top: 12px;
+}
+
+.orange{
+    border-radius: 50%;
+    border-color: #f9ce00;
+    background-color: #f9ce00;
+    width: 100px !important;
+    height: 100px !important;
+    margin: auto;
+    margin-top: 12px;
+}
+
+.vert{
+    border-radius: 50%;
+    border-color: #2ee092;
+    background-color: #2ee092;
+    width: 100px !important;
+    height: 100px !important;
+    margin: auto;
+    margin-top: 12px;
+}

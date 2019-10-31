@@ -1,0 +1,70 @@
+
+/*feu 2 annimé*/
+
+.bordure2{
+    border: 1px solid #3d3d3d;
+    width: 150px;
+    height: 360px;
+    background-color: #3d3d3d;
+    margin-left: 193px;
+}
+
+.rouge2{
+    border-radius: 50%;
+    border-color: #a72a2a;
+    background-color: #a72a2a;
+    width: 100px !important;
+    height: 100px !important;
+    margin: auto;
+    margin-top: 12px;
+}
+
+.orange2{
+    border-radius: 50%;
+    border-color: #f9ce00;
+    background-color: #f9ce00;
+    width: 100px !important;
+    height: 100px !important;
+    margin: auto;
+    margin-top: 12px;
+}
+
+.vert2{
+    border-radius: 50%;
+    border-color: #2ee092;
+    background-color: #2ee092;
+    width: 100px !important;
+    height: 100px !important;
+    margin: auto;
+    margin-top: 12px;
+}
+
+.rouge2:hover{
+    border-radius: 50%;
+    border-color: #ff0000;
+    background-color: #ff0000;
+    width: 100px !important;
+    height: 100px !important;
+    margin: auto;
+    margin-top: 12px;
+}
+
+.orange2:hover{
+    border-radius: 50%;
+    border-color: #f99500;
+    background-color: #f99500;
+    width: 100px !important;
+    height: 100px !important;
+    margin: auto;
+    margin-top: 12px;
+}
+
+.vert2:hover{
+    border-radius: 50%;
+    border-color: #0dd428;
+    background-color: #0dd428;
+    width: 100px !important;
+    height: 100px !important;
+    margin: auto;
+    margin-top: 12px;
+}
