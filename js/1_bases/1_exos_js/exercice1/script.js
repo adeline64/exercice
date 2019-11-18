@@ -1,17 +1,21 @@
-var maDiv = document.querySelector('div');
+let maDiv = document.querySelector('div');
 maDiv.style.color="green";
-maDiv.style.marginTop = "65px";
-
-
-    // crée un nouvel élément div
-    var newDiv = document.createElement("div");
-    // et lui donne un peu de contenu
-    var newContent = document.createTextNode('Coucou');
-    // ajoute le nœud texte au nouveau div créé
-    newDiv.appendChild(newContent);
-
-    // ajoute le nouvel élément créé et son contenu dans le DOM
-    var currentDiv = document.querySelector('div');
-    document.body.insertBefore(newDiv, currentDiv);
-
+maDiv.style.textAlign ="justify";
 console.log(maDiv);
+
+    // crï¿½e un nouvel ï¿½lï¿½ment div
+    let newDiv = document.createElement("div");
+    // et lui donne un peu de contenu
+    let newContent = document.createTextNode('Coucou');
+    // ajoute le nï¿½ud texte au nouveau div crï¿½ï¿½
+    newDiv.appendChild(newContent);
+    
+    // ajoute le nouvel ï¿½lï¿½ment crï¿½ï¿½ et son contenu dans le DOM
+    let currentDiv = document.querySelector('div');
+    
+    let div2 = document.body.insertBefore(newDiv, currentDiv);
+    div2.style.marginRight = "auto";
+    
+
+let divTransition = document.createElement('div');
+document.body.insertBefore(divTransition, currentDiv);

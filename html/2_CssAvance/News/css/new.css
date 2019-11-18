@@ -1,0 +1,98 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    font-family: 'Gamja Flower', cursive;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+section {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+section article {
+    margin: 5px;
+    height: 250px;
+    overflow: hidden;
+    transition: all 3s ease-in-out;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+
+section article:nth-child(even):hover {
+    background-position: 100% 75%;
+    cursor: pointer;
+}
+
+section article:nth-child(odd):hover {
+    background-position: 0% 25%;
+    cursor: pointer;
+}
+
+section article p {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #FFF;
+    text-align: center;
+    transition: all .3s ease-in-out;
+    padding: 10px 20px;
+    margin-top: 250px;
+}
+
+section article:hover p {
+    margin-top: 180px;
+}
+
+
+/* AJOUT DES ARRIERES PLANS */
+
+section article:nth-child(1) {
+    background-image: url(../images/paysage_1.webp);
+}
+
+section article:nth-child(2) {
+    background-image: url(../images/paysage_2.webp);
+}
+
+section article:nth-child(3) {
+    background-image: url(../images/paysage_3.webp);
+}
+
+section article:nth-child(4) {
+    background-image: url(../images/paysage_4.webp);
+}
+
+section article:nth-child(5) {
+    background-image: url(../images/paysage_5.webp);
+}
+
+section article:nth-child(6) {
+    background-image: url(../images/paysage_6.webp);
+}
+
+section article:nth-child(7) {
+    background-image: url(../images/paysage_7.webp);
+}
+
+section article:nth-child(8) {
+    background-image: url(../images/paysage_8.webp);
+}
+
+section article:nth-child(9) {
+    background-image: url(../images/paysage_9.webp);
+}
+
+section article:nth-child(10) {
+    background-image: url(../images/paysage_10.webp);
+}
