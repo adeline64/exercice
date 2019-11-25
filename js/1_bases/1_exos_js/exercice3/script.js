@@ -12,4 +12,8 @@
     let currentDiv = document.querySelector('div');
     
     let maDiv = document.body.insertBefore(newDiv, currentDiv);
+
+    maDiv.setAttribute("id", "monid");
+    maDiv.setAttribute("class", "maClasse");
+
 console.log(maDiv);

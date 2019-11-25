@@ -1,3 +1,5 @@
-div{
-    font-size:2em;
+.maClasse{
+    background-color: blue;
+    font-size: 12px;
+    height: 20%;
 }

@@ -1,6 +1,7 @@
 let maDiv = document.querySelector('div');
 maDiv.style.color="green";
-maDiv.style.textAlign ="justify";
+maDiv.style.textAlign ="center";
+maDiv.style.marginLeft = "30px";
 console.log(maDiv);
 
     // cr�e un nouvel �l�ment div
