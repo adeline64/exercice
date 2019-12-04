@@ -10,6 +10,7 @@
     
     // ajoute le nouvel �l�ment cr�� et son contenu dans le DOM
     let currentDiv = document.querySelector('div');
+    console.log(newContent);
     
     let maDiv = document.body.insertBefore(newDiv, currentDiv);
 

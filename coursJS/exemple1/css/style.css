@@ -1,12 +1,15 @@
 body{
-    color: blue;
     margin: 0;
     padding: 0;
-    border: 1px solid black;
+    background-color: black;
 }
 
 h1{
     margin: auto;
     text-align: center;
-
+    color: #228c73;
+    border: 12px solid white;
+    margin-top: 22%;
+    margin-left: 38%;
+    margin-right: 38%;
 }
