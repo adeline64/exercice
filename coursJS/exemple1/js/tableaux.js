@@ -14,7 +14,7 @@ for(let i=0; tab.length; i++){
     console.log(i);
 } 
 
-for(let i=0; tab.length; i++){
+for(let i=0; i<tab.length; i++){
     console.log(tab[i]);
 } */
 
