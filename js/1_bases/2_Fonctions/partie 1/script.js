@@ -1,24 +1,3 @@
-function affiche(titreAAfficher,texteAAfficher) {
-     //tu créées une div
-     var maDiv = document.createElement("div");
-
-     //tu créées un objet H1 nommé monTitre => tu écrase monTitre passé en paramètre
-     var monTitre = document.createElement("h1");
- 
-     //tu créées un objet p nommé monParagraphe => tu écrase monParagraphe passé en paramètre
-     var monParagraphe = document.createElement("p");
- 
-     monTitre.innerText = titreAAfficher;
-     monParagraphe.innerText = texteAAfficher;
-     maDiv.appendChild(monTitre);
-     maDiv.appendChild(monParagraphe);
-     document.body.appendChild(maDiv);
-}
-
-affiche("Bienvenue !","Bienvenue sur mon site ! Plein de lorem ipsum...");
-affiche("Chapitre 1 : un chapitre pour débuter","Paragraphe chapitre 1");
-affiche("Chapitre 2 : un autre chapitre","Paragraphe chapitre 2");
-affiche("Chapitre 3 : encore un chapitre","Paragraphe chapitre 3");
 /*
 var maDiv = document.createElement("div");
 var monTitre = document.createElement("h1");
@@ -56,3 +35,71 @@ maDiv4.appendChild(monTitre4);
 maDiv4.appendChild(monParagraphe4);
 document.body.appendChild(maDiv4);
 */
+
+
+// méthode 1 :
+
+//function affiche(titreAAfficher,texteAAfficher) {
+//      //tu créées une div
+//      let maDiv = document.createElement("div");
+
+//      //tu créées un objet H1 nommé monTitre => tu écrase monTitre passé en paramètre
+//      let monTitre = document.createElement("h1");
+ 
+//      //tu créées un objet p nommé monParagraphe => tu écrase monParagraphe passé en paramètre
+//      let monParagraphe = document.createElement("p");
+ 
+//      monTitre.innerText = titreAAfficher;
+//      monParagraphe.innerText = texteAAfficher;
+//      maDiv.appendChild(monTitre);
+//      maDiv.appendChild(monParagraphe);
+//      document.body.appendChild(maDiv);
+// }
+
+// //appel de la function
+// affiche("Bienvenue !","Bienvenue sur mon site ! Plein de lorem ipsum...");
+// affiche("Chapitre 1 : un chapitre pour débuter","Paragraphe chapitre 1");
+// affiche("Chapitre 2 : un autre chapitre","Paragraphe chapitre 2");
+// affiche("Chapitre 3 : encore un chapitre","Paragraphe chapitre 3");
+
+
+// méthode 2 :
+
+function affiche(chap) {
+     //tu créées une div
+     let maDiv = document.createElement("div");
+
+     //tu créées un objet H1 nommé monTitre => tu écrase monTitre passé en paramètre
+     let monTitre = document.createElement("h1");
+ 
+     //tu créées un objet p nommé monParagraphe => tu écrase monParagraphe passé en paramètre
+     let monParagraphe = document.createElement("p");
+ 
+     monTitre.innerText = chap.titreAAfficher;
+     monParagraphe.innerText = chap.texteAAfficher;
+     maDiv.appendChild(monTitre);
+     maDiv.appendChild(monParagraphe);
+     document.body.appendChild(maDiv);
+}
+
+let bienvenue = {
+     titreAAfficher : "Bienvenue !",
+     texteAAfficher : "Bienvenue sur mon site ! Plein de lorem ipsum..."
+};
+
+let chapitre1 = {
+     titreAAfficher : "Chapitre 1 : un chapitre pour débuter",
+     texteAAfficher : "Paragraphe chapitre 1"
+};
+
+console.log(bienvenue);
+console.log(bienvenue.titreAAfficher);
+console.log(bienvenue.texteAAfficher);
+
+//appel de la function
+affiche(bienvenue);
+affiche(chapitre1);
+
+
+
+

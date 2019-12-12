@@ -2,12 +2,13 @@ body{
     margin: 0;
     padding: 0;
     background-color: black;
+    color: blue;
 }
 
 h1{
     margin: auto;
     text-align: center;
-    color: #228c73;
+    color: #228c73 !important;
     border: 12px solid white;
     margin-top: 22%;
     margin-left: 38%;

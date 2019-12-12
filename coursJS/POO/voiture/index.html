@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>POO/EXEMPLE</title>
+</head>
+<body>
+    
+    <script src="classes/voiture.js"></script>
+    <script>
+        let maVoiture1= new Voiture("Tesla","jaune","automatique","3");
+        let monAutreVoiture = new Voiture("Honda","rouge","manuelle","5");
+        console.log(maVoiture1);
+        console.log(monAutreVoiture);
+        console.log("Ma tesla 1", maVoiture1.marque);
+        console.log("Ma tesla 2", monAutreVoiture.couleur);
+
+        console.log(maVoiture1.Klaxonner);
+    </script>
+</body>
+</html>

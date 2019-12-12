@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>POO/EXEMPLE</title>
+</head>
+<body>
+    
+    <script src="classes/robot.js"></script>
+    <script>
+        let monRobot = new Robot("2","2","2","0","neutre","1","carré","1","breignac");
+        console.log(monRobot);
+        console.log("monRobot a :", monRobot.bras, "bras");
+        console.log("monRobot a :", monRobot.jambes, "jambes");
+        console.log("monRobot a :", monRobot.yeux, "yeux");
+        console.log("monRobot a :", monRobot.oreille, "oreille");
+        console.log("monRobot a une bouche:", monRobot.bouche);
+        console.log("monRobot a :", monRobot.tete, "tete");
+        console.log("monRobot a un corps:", monRobot.corp);
+        console.log("monRobot a :", monRobot.antenne, "antenne");
+        console.log("monRobot a :", monRobot.nom, "nom");
+
+        console.log("premier niveau");
+        //premier niveau
+        monRobot.marcher();
+        monRobot.sauter();
+        monRobot.marcher();
+        monRobot.sauter();
+        monRobot.marcher();
+
+
+        console.log("second niveau");
+        //second niveau
+        monRobot.marcher();
+        monRobot.tomber();
+        monRobot.demitour();
+        monRobot.marcher();
+        monRobot.demitour();
+        monRobot.sauter();
+        monRobot.marcher();
+        monRobot.demitour();
+        monRobot.monter();
+        monRobot.marcher();
+        monRobot.tomber();
+        monRobot.sauter();
+        monRobot.sauter();
+        monRobot.monter();
+        monRobot.sauter();
+        monRobot.demitour();
+        monRobot.sauter();
+        monRobot.marcher();
+        monRobot.demitour();
+        monRobot.sauter();
+        monRobot.marcher();
+    </script>
+</body>
+</html>
