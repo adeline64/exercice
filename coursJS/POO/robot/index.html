@@ -9,6 +9,7 @@
 <body>
     
     <script src="classes/robot.js"></script>
+    <script src="classes/robotCorec.js"></script>
     <script>
         let monRobot = new Robot("2","2","2","0","neutre","1","carré","1","breignac");
         console.log(monRobot);
@@ -54,6 +55,11 @@
         monRobot.demitour();
         monRobot.sauter();
         monRobot.marcher();
+
+        let monSuperRobot = new RobotCorec();
+        monSuperRobot.ranger();
+        monSuperRobot.voler();
+        
     </script>
 </body>
 </html>

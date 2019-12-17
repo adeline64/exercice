@@ -63,43 +63,60 @@ document.body.appendChild(maDiv4);
 // affiche("Chapitre 3 : encore un chapitre","Paragraphe chapitre 3");
 
 
-// méthode 2 :
+// // méthode 2 :
 
-function affiche(chap) {
-     //tu créées une div
-     let maDiv = document.createElement("div");
+// function affiche(chap) {
+//      //tu créées une div
+//      let maDiv = document.createElement("div");
 
-     //tu créées un objet H1 nommé monTitre => tu écrase monTitre passé en paramètre
-     let monTitre = document.createElement("h1");
+//      //tu créées un objet H1 nommé monTitre => tu écrase monTitre passé en paramètre
+//      let monTitre = document.createElement("h1");
  
-     //tu créées un objet p nommé monParagraphe => tu écrase monParagraphe passé en paramètre
-     let monParagraphe = document.createElement("p");
+//      //tu créées un objet p nommé monParagraphe => tu écrase monParagraphe passé en paramètre
+//      let monParagraphe = document.createElement("p");
  
-     monTitre.innerText = chap.titreAAfficher;
-     monParagraphe.innerText = chap.texteAAfficher;
-     maDiv.appendChild(monTitre);
-     maDiv.appendChild(monParagraphe);
-     document.body.appendChild(maDiv);
+//      monTitre.innerText = chap.titreAAfficher;
+//      monParagraphe.innerText = chap.texteAAfficher;
+//      maDiv.appendChild(monTitre);
+//      maDiv.appendChild(monParagraphe);
+//      document.body.appendChild(maDiv);
+// }
+
+// let bienvenue = {
+//      titreAAfficher : "Bienvenue !",
+//      texteAAfficher : "Bienvenue sur mon site ! Plein de lorem ipsum..."
+// };
+
+// let chapitre1 = {
+//      titreAAfficher : "Chapitre 1 : un chapitre pour débuter",
+//      texteAAfficher : "Paragraphe chapitre 1"
+// };
+
+// console.log(bienvenue);
+// console.log(bienvenue.titreAAfficher);
+// console.log(bienvenue.texteAAfficher);
+
+// //appel de la function
+// affiche(bienvenue);
+// affiche(chapitre1);
+
+
+function affiche(titreAAfficher,texteAAfficher) {
+	var maDiv = document.createElement("div");
+	var monTitre = document.createElement("h1");
+	var monParagraphe = document.createElement("p");
+	monTitre.innerText = titreAAfficher;
+	monParagraphe.innerText = texteAAfficher;
+	maDiv.appendChild(monTitre);
+	maDiv.appendChild(monParagraphe);
+	document.body.appendChild(maDiv);
 }
 
-let bienvenue = {
-     titreAAfficher : "Bienvenue !",
-     texteAAfficher : "Bienvenue sur mon site ! Plein de lorem ipsum..."
-};
+var aTitre = ["Bienvenue !","Chapitre 1 : un chapitre pour débuter","Chapitre 2 : un autre chapitre","Chapitre 3 : encore un chapitre"];
+var aContenu = ["Bienvenue sur mon site ! Plein de lorem ipsum...","Paragraphe chapitre 1","Paragraphe chapitre 2","Paragraphe chapitre 3"];
 
-let chapitre1 = {
-     titreAAfficher : "Chapitre 1 : un chapitre pour débuter",
-     texteAAfficher : "Paragraphe chapitre 1"
-};
-
-console.log(bienvenue);
-console.log(bienvenue.titreAAfficher);
-console.log(bienvenue.texteAAfficher);
-
-//appel de la function
-affiche(bienvenue);
-affiche(chapitre1);
-
-
-
+//on boucle sur le tableau des titres
+for (var i=0; i < aTitre.length; i++) {
+	affiche(aTitre[i],aContenu[i]);
+}
 

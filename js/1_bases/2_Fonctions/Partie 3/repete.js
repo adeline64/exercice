@@ -1,3 +1,10 @@
+class repete {
+    constructor() {
+        this.titre = titre;
+    }
+}
+
+
 function affiche(titreAAfficher,texteAAfficher) {
      //tu créées une div
      var maDiv = document.createElement("div");
