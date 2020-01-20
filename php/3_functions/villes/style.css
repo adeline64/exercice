@@ -1,0 +1,13 @@
+table{
+    border: 1px solid black;
+}
+
+td{
+    background-color: coral;
+    color: white;
+}
+
+.rouge{
+    background-color: cyan;
+    color: red;
+}

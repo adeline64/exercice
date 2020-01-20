@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css">
     <title>ville</title>
 </head>
 <body>
     <?php
     
-        $results = array(
+        $tableauDeVilles = array(
             array(
                 "ville"=>"SAINT-TRIVIER-SUR-MOIGNANS",
                 "departement"=>"01",
@@ -124,10 +125,32 @@
                 "densite"=>"21")
         );
 
-        var_dump($results);
+        //var_dump($tableauDeVilles);
+?>
+<table>
+<?php
+asort($tableauDeVilles);
+        foreach ($tableauDeVilles as $uneVille){
+            //on parcourt le premier tableau 
+            echo "<tr>";
+            foreach ($uneVille AS $data => $datavalue)  {
+                //on parcourt le second tableau
+                
+                if ($datavalue=="PAU"){
+                    //si la valeur est = à pau alors : 
+                    echo "<td class='rouge'><b>$data</b></td>";
+			        echo "<td class='rouge'><b>$datavalue </b></td>";
+                }else{
+                    //sinon :
+                    echo "<td>$data</td>";
+                    echo "<td>$datavalue </td>";
+                }
+            }
+            echo "</tr>";
+        }
 
         
     ?>
-
+<table>
 </body>
 </html>
