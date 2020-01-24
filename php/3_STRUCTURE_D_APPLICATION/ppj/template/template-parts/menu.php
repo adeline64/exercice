@@ -11,19 +11,19 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="index.php">ACCUEIL</a>
+                        <a href="?page=accueil">ACCUEIL</a>
                     </li>
                     <li>
-                        <a href="produits.php">NOS PRODUITS</a>
+                        <a href="?page=produits">NOS PRODUITS</a>
                     </li>
                     <li>
-                        <a href="blog.php">BLOG</a>
+                        <a href="?page=blog">BLOG</a>
                     </li>
                     <li>
-                        <a href="contact.php">CONTACT</a>
+                        <a href="?page=contact">CONTACT</a>
                     </li>
                     <li>
-                        <a href="about.php">A PROPOS</a>
+                        <a href="?page=about">A PROPOS</a>
                     </li>
                 </ul>
             </div>

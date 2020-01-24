@@ -1,21 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-
-    <!-- Theme Made By www.w3schools.com - No Copyright -->
-    <?php
-    include "config/config.php";
-    include "$Template/head.php"
-?>
-
-</head>
-
-<body>
-
-    <!-- Navbar -->
-    <?php
-        include "$Template/menu.php";
-    ?>
 
     <!-- First Container -->
     <div class="container-fluid bg-1">
@@ -40,13 +23,3 @@
             <button type="submit" class="btn btn-default">Envoyer</button>
         </form>
     </div>
-
-    <!-- Footer -->
-    <?php
-        include "$Template/footer.php"
-    ?>
-
-
-</body>
-
-</html>

@@ -1,17 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<?php
-include "config/config.php";
-    include "$Template/head.php"
-?>
-
-<body>
-
-    <!-- Navbar -->
-    <?php
-        include "$Template/menu.php";
-    ?>
 
     <!-- First Container -->
     <div class="container-fluid bg-1 text-center">
@@ -54,12 +41,3 @@ include "config/config.php";
         </div>
     </div>
 
-    <!-- Footer -->
-    <?php
-        include "$Template/footer.php"
-    ?>
-
-
-</body>
-
-</html>
