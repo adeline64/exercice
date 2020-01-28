@@ -1,0 +1,1 @@
+SELECT COUNT(`idTable`) FROM `commandes` WHERE idTable = 10 GROUP BY idService
