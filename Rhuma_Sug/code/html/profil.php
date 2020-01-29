@@ -33,20 +33,26 @@ if ( ! empty( $_POST ) ) {
 <div class="well">
     <div id="myTabContent" class="tab-content">
         <div class="tab-pane active in" id="home">
+        <h2>Profil</h2>
             <form id="tab">
-                <label>Nom</label>
+                <label>Nom : </label>
                 <h3><?php echo $utilisateur->getNom() ?></h3>
-                <label>Prenom</label>
+                <label>Prenom : </label>
                 <h3> <?php echo $utilisateur->getPrenom() ?> </h3>
-                <label>Email</label>
+                <label>Email : </label>
                 <h3><?php echo $utilisateur->getEmail() ?><h3>
                 
                 
             </form>
         </div>
     </div>
-      
 </div>
+
+<div><h2>Historique des achats</h2></div>
+
+<div><h2>Mode de Paiement</h2></div>
+
+<img src="image/carte.png">
 
   <?php
 

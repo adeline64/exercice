@@ -172,3 +172,4 @@ ALTER TABLE `paiement`
 ALTER TABLE `livraison`
   MODIFY `id` int
 (11) NOT NULL AUTO_INCREMENT;
+
