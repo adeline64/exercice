@@ -10,7 +10,8 @@ class utilisateur {
 	private $password;
 	private $telephone;
 	private $adresse;
-	private $residence;
+	private $codepostal;
+	private $ville;
 
 	public function __construct( array $array =[] )
 	{
@@ -51,10 +52,15 @@ class utilisateur {
 		return $this->adresse;
 	}
 
+	public function getCodepostal() {
+		return $this->codepostal;
+    }
+    
+	public function getVille() {
+		return $this->ville;
+    }
 
-	public function getResidence() {
-		return $this->residence;
-	}
+
 
 	// LES SETTERS
 
@@ -167,18 +173,28 @@ class utilisateur {
 		$this->telephone = $telephone;
 	}
 
-	public function setAdresse( $adresse ) {
-			$this->adresse = $adresse;
+	public function setAdresse($adresse)
+	{
+		$this->adresse = $adresse;
+
+		return $this;
+	}
+
+	public function setCodepostal( $codepostal ){
+	    debug('<br>[debug]Dans "'.__CLASS__."::".__FUNCTION__.'" [/debug]',true);
+	
+				$this->codepostal = $codepostal;
+			}
 		
-	}
 
-
-	public function setResidence( $residence ) {
-		echo '<pre>'.print_r($residence,true).'</pre>';
+	public function setVille( $ville ) {
+		echo '<pre>'.print_r($ville,true).'</pre>';
 		debug('<br>[debug]Dans "'.__CLASS__."::".__FUNCTION__.'" [/debug]');
-		debug($residence);
-		$this->residence = $residence;
+		debug($ville);
+        $this->ville = $ville;
 	}
+
+
 
 	// HYDRATATION
 
@@ -191,4 +207,5 @@ class utilisateur {
 		}
 	}
 
-}
+
+	}

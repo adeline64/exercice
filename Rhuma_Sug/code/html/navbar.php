@@ -26,6 +26,9 @@ if (!empty($_SESSION['utilisateur'])) {
                         <li class="nav-item">
                             <a class="nav-link" href="?page=panier">Panier</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="?page=deconnexion">Deconnexion</a>
+                        </li>
                     </ul>
                    
                 </div>

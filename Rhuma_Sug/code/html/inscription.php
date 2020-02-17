@@ -22,18 +22,23 @@ if (!empty($_SESSION['utilisateur'])) {
 <?php
 
 }else{
-//debug($_POST);
+    var_dump($_POST);
+// debug($_POST);
+echo ( ! empty( $_POST ));
 if ( ! empty( $_POST ) ) {
-	if ( ! isset(
+    if ( ! isset(
 		$_POST['nom'],
         $_POST['prenom'],
         $_POST['email'],
         $_POST['password'],
         $_POST['telephone'],
-        $_POST['adresse']
+        $_POST['adresse'],
+        $_POST['codepostal'],
+        $_POST['ville']
         ) )
         
 	{
+        // var_dump($_POST);
         echo "il manque une ou plusieurs donnees";
 
 	} else {
@@ -41,25 +46,8 @@ if ( ! empty( $_POST ) ) {
         $managerUtilisateur->setDb( $db );
         $utilisateur=$managerUtilisateur->add( $_POST );
     }
-    
-    if ( ! isset(
-		$_POST['codepostal'],
-        $_POST['ville']
-        ) )
-	{
-        echo "il manque une ou plusieurs donnees";
-        
 
-	} else {
-		$managerResidence = new ManagerResidence();
-		$managerResidence->setDb( $db );
-        $residence = $managerResidence->add( $_POST);
-        //TODO mettre à jour l'utilisateur => update utilisateur set residence 
-        $utilisateur->setResidence($residence->getId());
-        $managerUtilisateur->update($utilisateur);
 
-    }
-    
     
 }
 ?>

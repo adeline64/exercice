@@ -1,0 +1,85 @@
+--1. Afficher la liste des plats avec comme colonnes : "Plat", "Type" et "Prix" (utilisez des alias)
+--  Le type affiché correspond à la désignation : entrée, plat ou dessert (INNER JOIN)
+SELECT p.LibellePlat as Plat, t.Designation as 'Type', concat( FORMAT(p.PrixVente, 2), '€') as Prix 
+FROM plats p 
+inner join typeplats t on t.idType=p.idType
+
+--2. Afficher chaque menu avec la liste de chaque plat avec son type, ordonné par prix 
+SELECT m.Libelle as Menu, concat( FORMAT(m.PrixVente, 2), '€') as PrixMenu, t.Designation as 'Type', p.LibellePlat
+FROM menus m
+inner join menu_plats mp on mp.idMenu = m.idMenu
+inner join plats p on p.idPlat = mp.idPlat
+inner join typeplats t on t.idType=p.idType
+order by m.PrixVente
+
+--3. Afficher pour chaque mois de 2019, le nb de menus commandés et le CA que cela représente
+SET lc_time_names = 'fr_FR';
+SELECT DATE_FORMAT(c.DateCommande, "%M %Y") as Mois, 
+       count(distinct c.idCommande) as 'nb Commandes',
+	   count(cm.idmenu) as 'nb Menus',
+	   concat( FORMAT( SUM(m.PrixVente), 2), '€') as 'CA des menus du mois'
+FROM commandes c
+inner join commande_menus cm on cm.idCommande=c.idCommande
+inner join menus m on m.idMenu=cm.idmenu
+where YEAR(c.DateCommande)=2019 
+group by mois, MONTH(c.DateCommande)
+order by MONTH(c.DateCommande)
+
+
+--4. Afficher aussi les commandes pour lesquels aucun menu n’a été commandé (LEFT JOIN)
+SET lc_time_names = 'fr_FR';
+SELECT DATE_FORMAT(c.DateCommande, "%M %Y") as Mois, 
+       count(distinct c.idCommande) as 'nb Commandes',
+	   count(cm.idmenu) as 'nb Menus',
+	   concat( FORMAT(SUM( IFNULL(m.PrixVente,0) ), 2), '€') as 'CA des menus du mois'
+FROM commandes c
+left join commande_menus cm on cm.idCommande=c.idCommande
+left join menus m on m.idMenu=cm.idmenu
+where YEAR(c.DateCommande)=2019 
+group by mois, MONTH(c.DateCommande)
+order by MONTH(c.DateCommande)
+
+--5. Afficher la même chose pour les plats à la carte 
+SET lc_time_names = 'fr_FR';
+SELECT DATE_FORMAT(c.DateCommande, "%M %Y") as Mois, 
+       count(distinct c.idCommande) as 'nb Commandes',
+	   count(cp.idPlat) as 'nb Plats',
+	   concat( FORMAT(SUM( IFNULL(p.PrixVente,0) ), 2), '€') as 'CA des plats du mois'
+FROM commandes c
+left join commande_plats cp on cp.idCommande=c.idCommande
+left join plats p on p.idPlat=cp.idPlat
+where YEAR(c.DateCommande)=2019 
+group by mois, MONTH(c.DateCommande)
+order by MONTH(c.DateCommande)
+
+--6. Afficher pour chaque mois de 2019 le CA total hors boisson (menu + plat à la carte)
+select Mois, SUM(nbCommandes) as nbCommandes, SUM(nbMenus) as nbMenus, SUM(nbPlats) as nbPlats, 
+       concat( FORMAT(SUM( IFNULL(CA,0) ), 2), '€') as CA 
+from (
+
+	SELECT DATE_FORMAT(c.DateCommande, "%m/%Y") as Mois, 
+		   count(distinct c.idCommande) as nbCommandes,
+		   count(cm.idmenu) as nbMenus, 0 as nbPlats,
+		   SUM( IFNULL(m.PrixVente,0)) as CA
+	FROM commandes c
+	left join commande_menus cm on cm.idCommande=c.idCommande
+	left join menus m on m.idMenu=cm.idmenu
+	where YEAR(c.DateCommande)=2019 
+	group by mois
+
+	UNION
+
+	SELECT DATE_FORMAT(c.DateCommande, "%m/%Y") as Mois, 
+		   count(distinct c.idCommande) as nbCommandes,
+		   0 as nbMenus,count(cp.idPlat) as nbPlats,
+		   SUM( IFNULL(p.PrixVente,0)) as CA
+	FROM commandes c
+	left join commande_plats cp on cp.idCommande=c.idCommande
+	left join plats p on p.idPlat=cp.idPlat
+	where YEAR(c.DateCommande)=2019 
+	group by mois
+
+	order by mois
+
+) as CAtotal
+group by Mois

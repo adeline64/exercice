@@ -13,7 +13,6 @@
     define('_DEBUG_',1);
     ini_set('display_errors', '1');
     ini_set('error_reporting', E_ALL);
-    error_reporting(E_ALL);
 
     //Les fonctions communes
     require_once 'include/functions.php';
@@ -90,7 +89,9 @@
 	    else if (!empty($_GET['page'])&& $_GET['page'] == 'panier')
 	    { include_once "code/html/panier.php"; }
 	    else if (!empty($_GET['page'])&& $_GET['page'] == 'profil')
-	    { include_once "code/html/profil.php";}
+        { include_once "code/html/profil.php";}
+        else if (!empty($_GET['page'])&& $_GET['page'] == 'deconnexion')
+	    { include_once "code/html/deconnexion.php"; }
 	    else { //par defaut accueil
 		    include_once "code/html/accueil.php"; }
     }

@@ -1,1 +1,0 @@
-SELECT COUNT(`idTable`) FROM `commandes` WHERE idTable = 10

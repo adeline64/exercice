@@ -1,12 +1,23 @@
 <?php
-$Template = "template/";
 
-$functions = "fonctions/";
+define('ASSETS_PATH','assets');
 
-$classes = "class/";
+define('STYLESHEET_DIR_PATH',ASSETS_PATH.'/css');
 
-$img = "assets/img/";
+define('IMAGES_PATH',ASSETS_PATH.'/images');
 
-$CSS = "assets/css/style.css";
+define('SCRIPTS_PATH',ASSETS_PATH.'/js');
 
-$title = "Pierre, Paul et Jacquot";
+define('TITLE','Pierre, Paul et Jacquot');
+
+define('TEMPLATE','template');
+
+define('TEMPLATE_PARTS',TEMPLATE.'/template-parts');
+
+define('TEMPLATE_PAGES',TEMPLATE.'/pages');
+
+define('ROUTES',include 'config/routes.php');
+
+define('DATAS_PATH','datas');
+
+?>

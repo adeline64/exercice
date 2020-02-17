@@ -38,14 +38,15 @@ class ManagerUtilisateur extends Manager{
 			//autre cas (mais pour nous invalide)
 			throw new Exception($exception->GetMessage(),$exception->GetCode());
 		}
-		$req = $this->db->prepare('INSERT INTO utilisateur (nom,prenom,email,password,telephone,adresse,residence) VALUES(:nom,:prenom,:email,:password,:telephone,:adresse,:residence)');
+		$req = $this->db->prepare('INSERT INTO utilisateur (nom,prenom,email,password,telephone,adresse,codepostal,ville) VALUES(:nom,:prenom,:email,:password,:telephone,:adresse,:codepostal,:ville)');
 		$req->bindValue('nom', $utilisateur->getNom(), PDO::PARAM_STR);
 		$req->bindValue('prenom', $utilisateur->getPrenom(), PDO::PARAM_STR);
 		$req->bindValue('email', $utilisateur->getEmail(), PDO::PARAM_STR);
 		$req->bindValue('password', password_hash($utilisateur->getPassword(),PASSWORD_BCRYPT));
 		$req->bindValue('telephone', $utilisateur->getTelephone(), PDO::PARAM_STR);
 		$req->bindValue('adresse', $utilisateur->getAdresse(), PDO::PARAM_STR);
-		$req->bindValue('residence', $utilisateur->getResidence(), PDO::PARAM_INT);
+		$req->bindValue('codepostal', $utilisateur->getCodepostal(), PDO::PARAM_STR);
+		$req->bindValue('ville', $utilisateur->getVille(), PDO::PARAM_STR);
 		$req->execute();
 		$id = $this->db->lastInsertId();
 		$utilisateur->setId($id);
@@ -61,14 +62,15 @@ class ManagerUtilisateur extends Manager{
 		debug($data);
         echo '<br>[debug]SESSION';
         echo '<pre>'.print_r($_SESSION,true).'</pre>';
-        $req = $this->db->prepare('UPDATE utilisateur SET nom=:nom,prenom=:prenom,email=:email,telephone=:telephone,adresse=:adresse,residence=:residence WHERE id =:id');
+        $req = $this->db->prepare('UPDATE utilisateur SET nom=:nom,prenom=:prenom,email=:email,telephone=:telephone,adresse=:adresse,codepostal=:codepostal,ville=:ville WHERE id =:id');
         $req->bindValue('id', $data->getId(), PDO::PARAM_INT);
         $req->bindValue('nom', $data->getNom(), PDO::PARAM_STR);
         $req->bindValue('prenom', $data->getPrenom(), PDO::PARAM_STR);
 		$req->bindValue('email', $data->getEmail(), PDO::PARAM_STR);
 		$req->bindValue('telephone', $data->getTelephone(), PDO::PARAM_STR);
 		$req->bindValue('adresse', $data->getAdresse(), PDO::PARAM_STR);
-		$req->bindValue('residence', $data->getResidence(), PDO::PARAM_INT);
+		$req->bindValue('codepostal', $data->getCodepostal(), PDO::PARAM_STR);
+		$req->bindValue('ville', $data->getVille(), PDO::PARAM_STR);
         if (! $req->execute()) {
 	        echo "<br>[debug] Erreur";
         }

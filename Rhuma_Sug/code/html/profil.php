@@ -11,7 +11,9 @@ if ( ! empty( $_POST ) ) {
     if ( ! isset(
         $_POST['nom'],
         $_POST['prenom'],
-        $_POST['email']
+        $_POST['email'],
+        $_POST['telephone'],
+        $_POST['prenom']
         ) )
     {
         echo "il manque une ou plusieurs donnees";
@@ -30,25 +32,23 @@ if ( ! empty( $_POST ) ) {
 
 ?>
 
-<div class="well">
-    <div id="myTabContent" class="tab-content">
-        <div class="tab-pane active in" id="home">
-        <h2>Profil</h2>
-            <form id="tab">
-                <label>Nom : </label>
-                <h3><?php echo $utilisateur->getNom() ?></h3>
-                <label>Prenom : </label>
-                <h3> <?php echo $utilisateur->getPrenom() ?> </h3>
-                <label>Email : </label>
-                <h3><?php echo $utilisateur->getEmail() ?><h3>
-                
-                
-            </form>
+<div class="container-fluid well span6">
+	<div class="row-fluid">
+        
+        <div class="span8">
+            <h3><?php echo $utilisateur->getNom() ?> <?php echo $utilisateur->getPrenom() ?></h3>
+            <h6><?php echo $utilisateur->getEmail() ?></h6>
+            <h6><?php echo $utilisateur->getVille() ?></h6>
+            <h6><?php echo $utilisateur->getTelephone() ?></h6>
         </div>
+        
+        
     </div>
 </div>
 
 <div><h2>Historique des achats</h2></div>
+
+
 
 <div><h2>Mode de Paiement</h2></div>
 
